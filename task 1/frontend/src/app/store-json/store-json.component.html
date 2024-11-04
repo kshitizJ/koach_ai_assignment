@@ -1,0 +1,16 @@
+<div class="card mt-4">
+  <div class="card-header">
+    <h5>Store JSON Data</h5>
+  </div>
+  <div class="card-body">
+    <form (submit)="storeData()">
+      <div class="form-group">
+        <label for="jsonData">JSON Data</label>
+        <textarea id="jsonData" class="form-control" [(ngModel)]="jsonData" name="jsonData"
+          placeholder="Enter JSON data here"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Store JSON</button>
+    </form>
+    <p class="mt-3 text-success">{{storeResponse}}</p>
+  </div>
+</div>
