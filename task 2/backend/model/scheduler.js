@@ -8,10 +8,7 @@ class Scheduler {
 
         // Check for overlaps
         for (let event of this.events) {
-            if (
-                (start_time < event.end_time && end_time > event.start_time) ||
-                (end_time > event.start_time && start_time < event.end_time)
-            ) {
+            if ((start_time < event.end_time && end_time > event.start_time)) {
                 return false; // Overlap found
             }
         }
